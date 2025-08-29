@@ -149,7 +149,7 @@ class Link {
 			if (!sql.affectedRows) 
 				return "Link não encontrado";
 
-			await sql.query("delete from link where idlink = ?", [id]);
+			await sql.query("delete from link where id = ?", [id]);
 
 			await sql.commit();
 
